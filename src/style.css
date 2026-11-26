@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "OldMoney";
+    src: url("/Nikela Famous.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "OldMoney";
+}
+
+body {
+    overflow: hidden;
+}
+
+.slider {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100svh;
+
+    perspective: 2000px;
+
+    background: #eaeaea;
+
+    overflow: hidden;
+}
+
+.stage {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+}
+
+.orbit {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 100px;
+    height: 125px;
+
+    transform:
+        translate(-50%, -50%)
+        rotateY(0deg);
+
+    transform-style: preserve-3d;
+}
+
+.panel {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    backface-visibility: hidden;
+}
+
+.panel img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.preview {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 250px;
+    height: 325px;
+
+    transform:
+        translate(-50%, -50%)
+        rotateY(0deg);
+
+    overflow: hidden;
+
+    z-index: 10;
+
+    transform-style: preserve-3d;
+}
+
+.preview img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.title {
+    position: fixed;
+
+    bottom: 3rem;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-family: "OldMoney";
+
+    font-size: 1.2rem;
+
+    text-transform: uppercase;
+
+    background-color: #000000;
+
+    color: rgb(255, 255, 255);
+
+    padding: 0.4rem 0.8rem;
+
+    border-radius: 3px;
+
+    z-index: 100;
+}
